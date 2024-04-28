@@ -2,7 +2,10 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jawline/controller/intro/intro_controller.dart';
+import 'package:jawline/screens/intro/intro_continue1.dart';
+import 'package:jawline/widgets/custom_button.dart';
 import 'package:jawline/widgets/intro_page_formate.dart';
+import 'package:jawline/widgets/text_style_formate.dart';
 
 class IntroPage extends StatelessWidget {
   IntroPage({super.key});
@@ -65,24 +68,13 @@ class IntroPage extends StatelessWidget {
                         .toList(),
                   ),
                   const Spacer(),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                      minimumSize: Size(Get.width - 80, 60),
-                      shape: const BeveledRectangleBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(4),
-                        ),
-                      ),
-                    ),
-                    onPressed: () {},
-                    child: const Text(
+                  CustomeButton.btn1(
+                    onPressed: () {
+                      Get.to(const IntroContinue1());
+                    },
+                    chile: CustomeText.headerText3(
                       "Continue",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      textColor: Colors.white,
                     ),
                   ),
                   const Spacer(),
